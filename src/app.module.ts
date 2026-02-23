@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { HelloWorldCommand } from './hello-world/hello-world.command.js';
+import { ExampleCommand } from './example/example.command.js';
 
 @Module({
-  providers: [HelloWorldCommand],
+  providers: [ExampleCommand],
 })
 export class AppModule {}

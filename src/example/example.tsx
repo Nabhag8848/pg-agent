@@ -1,8 +1,8 @@
 import React, { createElement } from 'react';
 import { Text } from 'ink';
 
-const HelloWorld = () => {
+const Example = () => {
   return <Text backgroundColor={'green'}>Hello, World!</Text>;
 };
 
-export default createElement(HelloWorld);
+export default createElement(Example);
