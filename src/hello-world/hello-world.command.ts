@@ -4,9 +4,9 @@ import HelloWorld from './hello-world.js';
 
 @Command({ name: 'helloworld', options: { isDefault: true } })
 export class HelloWorldCommand extends CommandRunner {
-  async run() {
+  async run(): Promise<void> {
     const { unmount, waitUntilExit } = render(HelloWorld);
-    unmount();
+    setTimeout(unmount, 1000);
     await waitUntilExit();
   }
 }
