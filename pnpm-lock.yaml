@@ -17,9 +17,18 @@ dependencies:
   '@openai/agents':
     specifier: ^0.4.15
     version: 0.4.15(zod@4.3.6)
+  dotenv:
+    specifier: ^17.3.1
+    version: 17.3.1
   ink:
     specifier: ^6.8.0
     version: 6.8.0(@types/react@19.2.14)(react@19.2.4)
+  ink-spinner:
+    specifier: ^5.0.0
+    version: 5.0.0(ink@6.8.0)(react@19.2.4)
+  ink-text-input:
+    specifier: ^6.0.0
+    version: 6.0.0(ink@6.8.0)(react@19.2.4)
   nest-commander:
     specifier: ^3.20.1
     version: 3.20.1(@nestjs/common@11.1.14)(@nestjs/core@11.1.14)(@types/inquirer@8.2.12)(@types/node@22.19.11)(typescript@5.9.3)
@@ -2979,6 +2988,11 @@ packages:
     engines: {node: '>=0.3.1'}
     dev: true
 
+  /dotenv@17.3.1:
+    resolution: {integrity: sha512-IO8C/dzEb6O3F9/twg6ZLXz164a2fhTnEWb95H23Dm4OuN+92NmEAlTrupP9VW6Jm3sO26tQlqyvyi4CsnY9GA==}
+    engines: {node: '>=12'}
+    dev: false
+
   /dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
@@ -3776,6 +3790,31 @@ packages:
 
   /inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
+
+  /ink-spinner@5.0.0(ink@6.8.0)(react@19.2.4):
+    resolution: {integrity: sha512-EYEasbEjkqLGyPOUc8hBJZNuC5GvXGMLu0w5gdTNskPc7Izc5vO3tdQEYnzvshucyGCBXc86ig0ujXPMWaQCdA==}
+    engines: {node: '>=14.16'}
+    peerDependencies:
+      ink: '>=4.0.0'
+      react: '>=18.0.0'
+    dependencies:
+      cli-spinners: 2.9.2
+      ink: 6.8.0(@types/react@19.2.14)(react@19.2.4)
+      react: 19.2.4
+    dev: false
+
+  /ink-text-input@6.0.0(ink@6.8.0)(react@19.2.4):
+    resolution: {integrity: sha512-Fw64n7Yha5deb1rHY137zHTAbSTNelUKuB5Kkk2HACXEtwIHBCf9OH2tP/LQ9fRYTl1F0dZgbW0zPnZk6FA9Lw==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      ink: '>=5'
+      react: '>=18'
+    dependencies:
+      chalk: 5.6.2
+      ink: 6.8.0(@types/react@19.2.14)(react@19.2.4)
+      react: 19.2.4
+      type-fest: 4.41.0
+    dev: false
 
   /ink@6.8.0(@types/react@19.2.14)(react@19.2.4):
     resolution: {integrity: sha512-sbl1RdLOgkO9isK42WCZlJCFN9hb++sX9dsklOvfd1YQ3bQ2AiFu12Q6tFlr0HvEUvzraJntQCCpfEoUe9DSzA==}
@@ -5760,7 +5799,6 @@ packages:
   /type-fest@4.41.0:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
-    dev: true
 
   /type-fest@5.4.4:
     resolution: {integrity: sha512-JnTrzGu+zPV3aXIUhnyWJj4z/wigMsdYajGLIYakqyOW1nPllzXEJee0QQbHj+CTIQtXGlAjuK0UY+2xTyjVAw==}
