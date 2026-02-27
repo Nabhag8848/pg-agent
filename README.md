@@ -1,5 +1,9 @@
 # pg-agent
 
+
+https://github.com/user-attachments/assets/1f765c25-64ce-4ac7-93bb-7c1e8c4ac25c
+
+
 A terminal-based AI agent that lets you query your PostgreSQL database in plain English. Type a natural language question, and pg-agent classifies it, fetches the live schema, generates SQL, executes it, and explains the results — all in your terminal.
 
 ## How it works
