@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls /Users/nabhag/OpenSource/pg-agent/.env*)",
+      "Bash(pnpm build)",
+      "Bash(chmod +x /Users/nabhag/OpenSource/pg-agent/scripts/migrate.sh)",
+      "Bash(node -e \"const m = require\\(''/Users/nabhag/OpenSource/pg-agent/node_modules/@openai/agents/dist/index.js''\\); console.log\\(Object.keys\\(m\\).filter\\(k => /tool/i.test\\(k\\)\\)\\)\")"
+    ]
+  }
+}

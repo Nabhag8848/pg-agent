@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: pg-agent-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pg_agent
+    ports:
+      - '5432:5432'
+    volumes:
+      - pg_agent_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres -d pg_agent']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pg_agent_data:

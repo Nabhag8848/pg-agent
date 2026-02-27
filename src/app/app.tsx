@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { Box, Text } from 'ink';
 import Spinner from 'ink-spinner';
 import { UncontrolledTextInput } from 'ink-text-input';
-import { Classification } from '../classifier/classifier.service.js';
 import { randomUUID } from 'crypto';
 
 interface Message {
   query: string;
-  result: Classification;
+  result: string;
 }
 
 interface AppProps {
-  onSubmit: (query: string) => Promise<Classification>;
+  onSubmit: (query: string) => Promise<string>;
 }
 
 const App = ({ onSubmit }: AppProps) => {
@@ -42,7 +41,7 @@ const App = ({ onSubmit }: AppProps) => {
             <Text>{msg.query}</Text>
           </Box>
           <Box paddingLeft={2} marginBottom={1}>
-            <Text color="cyan">{JSON.stringify(msg.result, null, 2)}</Text>
+            <Text color="cyan">{msg.result}</Text>
           </Box>
         </Box>
       ))}
